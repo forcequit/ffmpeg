@@ -3,6 +3,7 @@
 require 'vendor/autoload.php';
 use FFMpeg\FFMpeg;
 use FFMpeg\Format\Audio\Mp3;
+use FFMpeg\FFProbe;
 
 // Create an FFMpeg instance
 $ffmpeg = FFMpeg::create();
