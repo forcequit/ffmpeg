@@ -1,5 +1,8 @@
 <?PHP
 
+open_basedir="/tmp:/usr/share/php::/usr/bin/ffmpeg:/usr/bin/ffprobe";
+
+  exit;
 
 require 'vendor/autoload.php';
 use FFMpeg\FFMpeg;
