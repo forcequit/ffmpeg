@@ -1,5 +1,11 @@
 <?PHP
 
+$directory = '/home/forge/default/vendor/php-ffmpeg/php-ffmpeg';  // Adjust the path if necessary
+$contents = shell_exec("ls {$directory}");
+echo nl2br($contents);
+
+exit;
+
 require 'vendor/autoload.php';
 use FFMpeg\FFMpeg;
 use FFMpeg\Format\Audio\Mp3;
