@@ -11,8 +11,8 @@ class ConvertVideoWorkflow extends Workflow
     {
         yield ActivityStub::make(
             ConvertVideoWebmActivity::class,
-            storage_path('app/oceans.mp4'),
-            storage_path('app/oceans.webm'),
+            storage_path('/timur.mp4'),
+            storage_path('/timur.webm'),
         );
     }
 }
