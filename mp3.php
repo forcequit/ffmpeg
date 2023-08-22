@@ -1,27 +1,21 @@
 <?PHP
 
-$output = shell_exec('ls -la');
-echo "<pre>$output</pre>";
+require 'vendor/autoload.php';  // Adjust this path if necessary
 
-exit;
-
-$ffmpeg = FFMpeg\FFMpeg::create(array(
-    'ffmpeg.binaries'  => 'vendor/php-ffmpeg',
-    'ffprobe.binaries' => 'vendor/php-ffmpeg',
-    'timeout'          => 3600, // The timeout for the underlying process
-    'ffmpeg.threads'   => 12,   // The number of threads that FFMpeg should use
-), $logger);
-
-exit;
-
-require 'vendor/autoload.php';
 use FFMpeg\FFMpeg;
-use FFMpeg\Format\Audio\Mp3;
+use FFMpeg\Coordinate\TimeCode;
+
+$ffmpegBinaries = '/home/forge/default/vendor/php-ffmpeg/ffmpeg';
+$ffprobeBinaries = '/home/forge/default/vendor/php-ffmpeg/ffprobe';
 
 // Create an FFMpeg instance
-$ffmpeg = FFMpeg::create();
+$ffmpeg = FFMpeg::create(array(
+    'ffmpeg.binaries'  => $ffmpegBinaries,
+    'ffprobe.binaries' => $ffprobeBinaries,
+));
 
 exit;
+
 
 // Open the audio file
 $audio = $ffmpeg->open('test.mp3');
