@@ -1,5 +1,11 @@
 <?PHP
 
+
+$output = shell_exec('find /home/forge/default/vendor/php-ffmpeg -name ffmpeg');
+echo "<pre>$output</pre>";
+
+exit;
+
 require 'vendor/autoload.php';  // Adjust this path if necessary
 
 use FFMpeg\FFMpeg;
