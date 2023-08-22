@@ -1,8 +1,20 @@
 <?PHP
 
 
-$output = shell_exec('find /home/forge/default/vendor/php-ffmpeg -name ffmpeg');
-echo "<pre>$output</pre>";
+// Define the commands
+$commands = [
+    "cd ffmpeg-5.1.2",
+    "./configure --enable-gpl --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libx264 --enable-libx265 --enable-nonfree",
+    "make",
+    "sudo make install"
+];
+
+// Execute the commands
+foreach ($commands as $command) {
+    $output = shell_exec($command . " 2>&1");
+    echo "<pre>$command\n$output</pre>";
+}
+
 
 exit;
 
