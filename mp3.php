@@ -1,5 +1,10 @@
 <?PHP
 
+$output = shell_exec('ls -la');
+echo "<pre>$output</pre>";
+
+exit;
+
 $ffmpeg = FFMpeg\FFMpeg::create(array(
     'ffmpeg.binaries'  => 'vendor/php-ffmpeg',
     'ffprobe.binaries' => 'vendor/php-ffmpeg',
