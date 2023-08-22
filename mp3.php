@@ -5,8 +5,8 @@ require 'vendor/autoload.php';  // Adjust this path if necessary
 use FFMpeg\FFMpeg;
 use FFMpeg\Coordinate\TimeCode;
 
-$ffmpegBinaries = '/home/forge/default/vendor/php-ffmpeg/ffmpeg';
-$ffprobeBinaries = '/home/forge/default/vendor/php-ffmpeg/ffprobe';
+$ffmpegBinaries = '/home/forge/default/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFMpeg.php';
+$ffprobeBinaries = '/home/forge/default/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFProbe.php';
 
 // Create an FFMpeg instance
 $ffmpeg = FFMpeg::create(array(
