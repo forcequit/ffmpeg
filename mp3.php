@@ -1,8 +1,8 @@
 <?PHP
 
 $ffmpeg = FFMpeg\FFMpeg::create(array(
-    'ffmpeg.binaries'  => '/vendor/php-ffmpeg/',
-    'ffprobe.binaries' => '/vendor/php-ffmpeg/',
+    'ffmpeg.binaries'  => '/vendor/php-ffmpeg',
+    'ffprobe.binaries' => '/vendor/php-ffmpeg',
     'timeout'          => 3600, // The timeout for the underlying process
     'ffmpeg.threads'   => 12,   // The number of threads that FFMpeg should use
 ), $logger);
