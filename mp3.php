@@ -12,14 +12,14 @@ use FFMpeg\Filters\Audio\AudioFilters;
 $ffmpeg = FFMpeg::create(array());
 
 // Open the audio file
-$audio = $ffmpeg->open('vo.mp3');
+$audio = $ffmpeg->open('https://sensorpro.net/vo.mp3');
 
 $format = new Mp3();
 $format->setAudioChannels(1); //mono
 $format->setAudioKiloBitrate(16); // Lower bitrate
 
 // Save the converted file
-$audio->save($format, 'vo-mono.mp3');
+$audio->save($format, 'vo1.mp3');
 
 echo 'Completed.';
 
