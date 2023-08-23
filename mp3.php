@@ -25,7 +25,7 @@ $metadata = $audio->getFormat()->get('tags');
 // Save the converted file
 $audio->save($format, 'vo-mono.mp3');
 
-echo 'Completed: " . $metadata;
+echo 'Completed: ' . $metadata;
 
 
 ?>
