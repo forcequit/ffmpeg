@@ -10,11 +10,10 @@ use FFMpeg\Format\Audio\Mp3;
 $ffmpeg = FFMpeg::create(array(
 ));
 
-
-
 // Open the audio file
 $audio = $ffmpeg->open('vo.mp3');
 
+$format = new Mp3();
 $format->setAudioChannels(1); //mono
 $format->setAudioKiloBitrate(16); // Lower bitrate
 
