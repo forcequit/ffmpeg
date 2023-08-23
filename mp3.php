@@ -16,7 +16,8 @@ $audio = $ffmpeg->open('vo.mp3');
 $format = new Mp3();
 $format->setAudioChannels(1); //mono
 $format->setAudioKiloBitrate(16); // Lower bitrate
-$format->addFilter(['-qscale', 7]);
+//$format->addFilter(['-qscale', 7]);
+$format->setQscale(7); // Lower bitrate
 
 $metadata = $audio->getFormat()->get('tags');
 
