@@ -7,8 +7,9 @@ use FFMpeg\Coordinate\TimeCode; //not used.
 use FFMpeg\Format\Audio\Mp3;
 
 // Create an FFMpeg instance
-$ffmpeg = FFMpeg::create(array(
-));
+$ffmpeg = FFMpeg::create(array());
+
+$ffmpeg->addFilter('-q:a', 7);
 
 // Open the audio file
 $audio = $ffmpeg->open('vo.mp3');
@@ -17,11 +18,9 @@ $format = new Mp3();
 $format->setAudioChannels(1); //mono
 $format->setAudioKiloBitrate(16); // Lower bitrate
 
-$metadata = $audio->getFormat()->get('tags');
-
 // Save the converted file
 $audio->save($format, 'vo-mono.mp3');
 
-echo 'Completed: ' . $metadata[0];
+echo 'Completed.';
 
 ?>
