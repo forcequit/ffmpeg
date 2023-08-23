@@ -5,6 +5,8 @@ require 'vendor/autoload.php';  // Adjust this path if necessary
 use FFMpeg\FFMpeg;
 use FFMpeg\Coordinate\TimeCode; //not used.
 use FFMpeg\Format\Audio\Mp3;
+use FFMpeg\Filters\Audio\AudioFilters;
+
 
 // Create an FFMpeg instance
 $ffmpeg = FFMpeg::create(array());
