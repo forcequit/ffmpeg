@@ -4,6 +4,7 @@ require 'vendor/autoload.php';  // Adjust this path if necessary
 
 use FFMpeg\FFMpeg;
 use FFMpeg\Coordinate\TimeCode;
+use FFMpeg\Format\Audio\Mp3;
 
 
 // Create an FFMpeg instance
