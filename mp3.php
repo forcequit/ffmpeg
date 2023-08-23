@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';  // Adjust this path if necessary
 
 use FFMpeg\FFMpeg;
-use FFMpeg\Coordinate\TimeCode;
+use FFMpeg\Coordinate\TimeCode; //not used.
 use FFMpeg\Format\Audio\Mp3;
 
 
@@ -15,14 +15,17 @@ $ffmpeg = FFMpeg::create(array(
 // Open the audio file
 $audio = $ffmpeg->open('vo.mp3');
 
-// Set the desired format (MP3) and specify it should be mono (1 channel)
 $format = new Mp3();
-$format->setAudioChannels(1);
+$format->setAudioChannels(1); //mono
+$format->setAudioQuality(7); //qscale 1-9
+$format->setAudioKiloBitrate(16); // Lower bitrate
+
+$metadata = $audio->getFormat()->get('tags');
 
 // Save the converted file
 $audio->save($format, 'vo-mono.mp3');
 
-echo "Conversion completed!";
+echo 'Completed: " . $metadata;
 
 
 ?>
