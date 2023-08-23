@@ -1,26 +1,13 @@
 <?PHP
 
-
-$ffmpeg = \FFMpeg\FFMpeg::create([
-    'ffmpeg.binaries'  => exec('which ffmpeg'),
-    'ffprobe.binaries' => exec('which ffprobe')
-]);
-
-
-exit;
-
 require 'vendor/autoload.php';  // Adjust this path if necessary
 
 use FFMpeg\FFMpeg;
 use FFMpeg\Coordinate\TimeCode;
 
-$ffmpegBinaries = '/home/forge/default/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFMpeg';
-$ffprobeBinaries = '/home/forge/default/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFProbe';
 
 // Create an FFMpeg instance
 $ffmpeg = FFMpeg::create(array(
-    'ffmpeg.binaries'  => $ffmpegBinaries,
-    'ffprobe.binaries' => $ffprobeBinaries,
 ));
 
 exit;
