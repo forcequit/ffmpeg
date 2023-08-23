@@ -1,5 +1,7 @@
 <?php
 
+echp "x"; exit;
+
 namespace App\Workflows\ConvertVideo;
 
 use FFMpeg\FFMpeg;
