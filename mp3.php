@@ -8,10 +8,12 @@ use FFMpeg\Format\Audio\Mp3;
 use FFMpeg\Filters\Audio\AudioFilters;
 
 
+//FFMpeg::fromDisk('videos')->open('steve_howe.mp4')->addFilter(['-itsoffset', 1]);
+
 // Create an FFMpeg instance
 $ffmpeg = FFMpeg::create(array());
 
-$ffmpeg->addFilter('-q:a', 7);
+$ffmpeg->addFilter(['-q:a', 7]);
 
 // Open the audio file
 $audio = $ffmpeg->open('vo.mp3');
